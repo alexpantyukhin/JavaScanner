@@ -8,18 +8,20 @@ namespace JavaScannerMain
     {
         static void Main(string[] args)
         {
-            var data = JavaClass.FromFile("D:\\Work\\Java\\helloworld.class");
-
+            //var data = JavaClass.FromFile("D:\\Work\\java\\test_compile\\HelloWorld.class");
+            var jar = JavaScanner.JarReader.FromFile("D:\\Work\\java\\test_compile\\myJar.jar");
+            //Console.WriteLine( data.NameIndex);
             // JsonConvert.DefaultSettings = () => new JsonSerializerSettings
             // {
             //     PreserveReferencesHandling = PreserveReferencesHandling.All,
             //     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                 
             // };
-            foreach (var mInfo in data.Methods)
-            {
-                ShowSign(data, mInfo);
-            }
+
+            // foreach (var mInfo in data.Methods)
+            // {
+            //     ShowSign(data, mInfo);
+            // }
 
         }
 
